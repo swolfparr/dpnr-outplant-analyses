@@ -6,7 +6,7 @@ plot_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,NA,cumulative_deaths,28,count,
 plot_month,Plot C,all,Plot C,April,2,April,NA,NA,NA,NA,cumulative_survivorship,100,percent,554,554,99.33634923619502,100,Baseline month: April
 plot_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,NA,cumulative_survivorship,94.94584837545126,percent,526,554,92.777920382687,96.6156336935243,Baseline month: April
 plot_month,Plot C,all,Plot C,April,2,April,NA,NA,NA,NA,outplant_cover,0.0756172916666666,percent_of_plot,554,NA,NA,NA,Total area m2: 0.362963
-plot_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,NA,outplant_cover,0.1517986979166666,percent_of_plot,530,NA,NA,NA,Total area m2: 0.728634
+plot_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,NA,outplant_cover,0.06534854166666669,percent_of_plot,530,NA,NA,NA,Total area m2: 0.313673
 species_interval,Plot C,all,Plot C,November to April,NA,NA,1,November,April,Montastraea cavernosa,species_interval_survivorship,NA,percent,0,0,NA,NA,Deaths: 0
 species_interval,Plot C,all,Plot C,November to April,NA,NA,1,November,April,Orbicella annularis,species_interval_survivorship,NA,percent,0,0,NA,NA,Deaths: 0
 species_interval,Plot C,all,Plot C,November to April,NA,NA,1,November,April,Orbicella faveolata,species_interval_survivorship,NA,percent,0,0,NA,NA,Deaths: 0
@@ -25,11 +25,11 @@ species_month,Plot C,all,Plot C,April,2,April,NA,NA,NA,Orbicella faveolata,speci
 species_month,Plot C,all,Plot C,April,2,April,NA,NA,NA,Orbicella franksi,species_cover_share,23.609569019431735,percent_of_outplant_cover,124,554,NA,NA,Species area m2: 0.085694
 species_month,Plot C,all,Plot C,April,2,April,NA,NA,NA,Porites porites,species_cover_share,30.767185636001468,percent_of_outplant_cover,192,554,NA,NA,Species area m2: 0.111674
 species_month,Plot C,all,Plot C,April,2,April,NA,NA,NA,Unidentified coral,species_cover_share,0.006405611591264125,percent_of_outplant_cover,1,554,NA,NA,Species area m2: 2.3e-05
-species_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,Montastraea cavernosa,species_cover_share,8.870608862134093,percent_of_outplant_cover,167,530,NA,NA,Species area m2: 0.064634
-species_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,Orbicella annularis,species_cover_share,49.53754200927421,percent_of_outplant_cover,42,530,NA,NA,Species area m2: 0.360947
-species_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,Orbicella faveolata,species_cover_share,20.5455415700961,percent_of_outplant_cover,23,530,NA,NA,Species area m2: 0.149702
-species_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,Orbicella franksi,species_cover_share,9.5867779937451445,percent_of_outplant_cover,118,530,NA,NA,Species area m2: 0.069852
-species_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,Porites porites,species_cover_share,11.45952956475047,percent_of_outplant_cover,180,530,NA,NA,Species area m2: 0.083498
+species_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,Montastraea cavernosa,species_cover_share,20.60561476442026,percent_of_outplant_cover,167,530,NA,NA,Species area m2: 0.064634
+species_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,Orbicella annularis,species_cover_share,16.194651755171783,percent_of_outplant_cover,42,530,NA,NA,Species area m2: 0.050798
+species_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,Orbicella faveolata,species_cover_share,14.727996990496479,percent_of_outplant_cover,23,530,NA,NA,Species area m2: 0.046198
+species_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,Orbicella franksi,species_cover_share,21.852295224644774,percent_of_outplant_cover,118,530,NA,NA,Species area m2: 0.068545
+species_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,Porites porites,species_cover_share,26.6194412652667,percent_of_outplant_cover,180,530,NA,NA,Species area m2: 0.083498
 species_month,Plot C,all,Plot C,April,2,April,NA,NA,NA,Montastraea cavernosa,species_prevalence,30.505415162454874,percent_of_present_outplants,169,554,NA,NA,Species area m2: 0.077037
 species_month,Plot C,all,Plot C,April,2,April,NA,NA,NA,Orbicella annularis,species_prevalence,7.76173285198556,percent_of_present_outplants,43,554,NA,NA,Species area m2: 0.047191
 species_month,Plot C,all,Plot C,April,2,April,NA,NA,NA,Orbicella faveolata,species_prevalence,4.512635379061372,percent_of_present_outplants,25,554,NA,NA,Species area m2: 0.041344
@@ -37,9 +37,9 @@ species_month,Plot C,all,Plot C,April,2,April,NA,NA,NA,Orbicella franksi,species
 species_month,Plot C,all,Plot C,April,2,April,NA,NA,NA,Porites porites,species_prevalence,34.65703971119134,percent_of_present_outplants,192,554,NA,NA,Species area m2: 0.111674
 species_month,Plot C,all,Plot C,April,2,April,NA,NA,NA,Unidentified coral,species_prevalence,0.18050541516245489,percent_of_present_outplants,1,554,NA,NA,Species area m2: 2.3e-05
 species_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,Montastraea cavernosa,species_prevalence,31.50943396226415,percent_of_present_outplants,167,530,NA,NA,Species area m2: 0.064634
-species_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,Orbicella annularis,species_prevalence,7.9245283018867925,percent_of_present_outplants,42,530,NA,NA,Species area m2: 0.360947
-species_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,Orbicella faveolata,species_prevalence,4.339622641509434,percent_of_present_outplants,23,530,NA,NA,Species area m2: 0.149702
-species_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,Orbicella franksi,species_prevalence,22.264150943396228,percent_of_present_outplants,118,530,NA,NA,Species area m2: 0.069852
+species_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,Orbicella annularis,species_prevalence,7.9245283018867925,percent_of_present_outplants,42,530,NA,NA,Species area m2: 0.050798
+species_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,Orbicella faveolata,species_prevalence,4.339622641509434,percent_of_present_outplants,23,530,NA,NA,Species area m2: 0.046198
+species_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,Orbicella franksi,species_prevalence,22.264150943396228,percent_of_present_outplants,118,530,NA,NA,Species area m2: 0.068545
 species_month,Plot C,all,Plot C,June,3,June,NA,NA,NA,Porites porites,species_prevalence,33.9622641509434,percent_of_present_outplants,180,530,NA,NA,Species area m2: 0.083498
 plot_interval,Plot E,all,Plot E,May to June,NA,NA,1,May,June,NA,interval_survivorship,87.08487084870849,percent,236,271,82.49830371178574,90.83667907025146,Deaths: 35; births/new detections: 3
 plot_interval,Plot E,all,Plot E,June to July,NA,NA,2,June,July,NA,interval_survivorship,94.75982532751091,percent,217,229,91.02543611613739,97.26334836838284,Deaths: 12; births/new detections: 1
@@ -55,13 +55,13 @@ plot_month,Plot E,all,Plot E,May,1,May,NA,NA,NA,NA,cumulative_survivorship,100,p
 plot_month,Plot E,all,Plot E,June,2,June,NA,NA,NA,NA,cumulative_survivorship,87.08487084870849,percent,236,271,82.49830371178574,90.83667907025146,Baseline month: May
 plot_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,NA,cumulative_survivorship,80.07380073800738,percent,217,271,74.81475306197578,84.66180636190914,Baseline month: May
 plot_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,NA,cumulative_survivorship,78.59778597785977,percent,213,271,73.22956518890139,83.3286711222492,Baseline month: May
-plot_month,Plot E,all,Plot E,May,1,May,NA,NA,NA,NA,outplant_cover,0.05876536458333333,percent_of_plot,271,NA,NA,NA,Total area m2: 0.282074
-plot_month,Plot E,all,Plot E,June,2,June,NA,NA,NA,NA,outplant_cover,0.05839677083333336,percent_of_plot,239,NA,NA,NA,Total area m2: 0.280305
-plot_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,NA,outplant_cover,0.07547010416666668,percent_of_plot,218,NA,NA,NA,Total area m2: 0.362257
-plot_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,NA,outplant_cover,0.06492947916666666,percent_of_plot,222,NA,NA,NA,Total area m2: 0.311661
-plot_month,Plot E,all,Plot E,September,5,September,NA,NA,NA,NA,outplant_cover,0.016336666666666676,percent_of_plot,55,NA,NA,NA,Total area m2: 0.078416
-plot_month,Plot E,all,Plot E,October,6,October,NA,NA,NA,NA,outplant_cover,0.016332343750000002,percent_of_plot,54,NA,NA,NA,Total area m2: 0.078395
-plot_month,Plot E,all,Plot E,November,7,November,NA,NA,NA,NA,outplant_cover,0.01581473958333333,percent_of_plot,56,NA,NA,NA,Total area m2: 0.075911
+plot_month,Plot E,all,Plot E,May,1,May,NA,NA,NA,NA,outplant_cover,0.058079322916666655,percent_of_plot,271,NA,NA,NA,Total area m2: 0.278781
+plot_month,Plot E,all,Plot E,June,2,June,NA,NA,NA,NA,outplant_cover,0.05105614583333334,percent_of_plot,239,NA,NA,NA,Total area m2: 0.24507
+plot_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,NA,outplant_cover,0.04656848958333334,percent_of_plot,218,NA,NA,NA,Total area m2: 0.223529
+plot_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,NA,outplant_cover,0.0489222916666667,percent_of_plot,222,NA,NA,NA,Total area m2: 0.234827
+plot_month,Plot E,all,Plot E,September,5,September,NA,NA,NA,NA,outplant_cover,0.014905989583333338,percent_of_plot,55,NA,NA,NA,Total area m2: 0.071549
+plot_month,Plot E,all,Plot E,October,6,October,NA,NA,NA,NA,outplant_cover,0.014928541666666663,percent_of_plot,54,NA,NA,NA,Total area m2: 0.071657
+plot_month,Plot E,all,Plot E,November,7,November,NA,NA,NA,NA,outplant_cover,0.015582552083333333,percent_of_plot,56,NA,NA,NA,Total area m2: 0.074796
 species_interval,Plot E,all,Plot E,May to June,NA,NA,1,May,June,Acropora cervicornis,species_interval_survivorship,85.71428571428571,percent,12,14,57.187083909030115,98.22054845168084,Deaths: 2
 species_interval,Plot E,all,Plot E,May to June,NA,NA,1,May,June,Acropora palmata,species_interval_survivorship,45.45454545454545,percent,25,55,31.97006799951665,59.445510884266106,Deaths: 30
 species_interval,Plot E,all,Plot E,May to June,NA,NA,1,May,June,Orbicella annularis,species_interval_survivorship,97.27272727272727,percent,107,110,92.23632295004867,99.43400035585206,Deaths: 3
@@ -93,75 +93,75 @@ species_interval,Plot E,all,Plot E,October to November,NA,NA,6,October,November,
 species_interval,Plot E,all,Plot E,October to November,NA,NA,6,October,November,Orbicella faveolata,species_interval_survivorship,100,percent,3,3,29.240177382128667,100,Deaths: 0
 species_interval,Plot E,all,Plot E,October to November,NA,NA,6,October,November,Orbicella franksi,species_interval_survivorship,100,percent,19,19,82.35330881930348,100,Deaths: 0
 species_interval,Plot E,all,Plot E,October to November,NA,NA,6,October,November,Orbicella sp.,species_interval_survivorship,100,percent,1,1,2.500000000000002,100,Deaths: 0
-species_month,Plot E,all,Plot E,May,1,May,NA,NA,NA,Acropora cervicornis,species_cover_share,3.11337017358049,percent_of_outplant_cover,14,271,NA,NA,Species area m2: 0.008782
-species_month,Plot E,all,Plot E,May,1,May,NA,NA,NA,Acropora palmata,species_cover_share,37.622518933434975,percent_of_outplant_cover,55,271,NA,NA,Species area m2: 0.106123
-species_month,Plot E,all,Plot E,May,1,May,NA,NA,NA,Orbicella annularis,species_cover_share,34.83973606193415,percent_of_outplant_cover,110,271,NA,NA,Species area m2: 0.098274
-species_month,Plot E,all,Plot E,May,1,May,NA,NA,NA,Orbicella faveolata,species_cover_share,6.915212776800393,percent_of_outplant_cover,29,271,NA,NA,Species area m2: 0.019506
-species_month,Plot E,all,Plot E,May,1,May,NA,NA,NA,Orbicella franksi,species_cover_share,17.509162054249998,percent_of_outplant_cover,63,271,NA,NA,Species area m2: 0.049389
-species_month,Plot E,all,Plot E,June,2,June,NA,NA,NA,Acropora cervicornis,species_cover_share,3.281520632026956,percent_of_outplant_cover,12,239,NA,NA,Species area m2: 0.009198
-species_month,Plot E,all,Plot E,June,2,June,NA,NA,NA,Acropora palmata,species_cover_share,20.26002079880986,percent_of_outplant_cover,25,239,NA,NA,Species area m2: 0.05679
-species_month,Plot E,all,Plot E,June,2,June,NA,NA,NA,Orbicella annularis,species_cover_share,45.895535034221716,percent_of_outplant_cover,110,239,NA,NA,Species area m2: 0.128647
-species_month,Plot E,all,Plot E,June,2,June,NA,NA,NA,Orbicella faveolata,species_cover_share,7.337199367116833,percent_of_outplant_cover,29,239,NA,NA,Species area m2: 0.020567
-species_month,Plot E,all,Plot E,June,2,June,NA,NA,NA,Orbicella franksi,species_cover_share,23.225724167824623,percent_of_outplant_cover,63,239,NA,NA,Species area m2: 0.065103
-species_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,Acropora cervicornis,species_cover_share,3.0105739993623306,percent_of_outplant_cover,12,218,NA,NA,Species area m2: 0.010906
-species_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,Acropora palmata,species_cover_share,28.965870867741508,percent_of_outplant_cover,19,218,NA,NA,Species area m2: 0.104931
-species_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,Orbicella annularis,species_cover_share,35.20337109203008,percent_of_outplant_cover,95,218,NA,NA,Species area m2: 0.127526
-species_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,Orbicella faveolata,species_cover_share,7.940023160384977,percent_of_outplant_cover,29,218,NA,NA,Species area m2: 0.028763
-species_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,Orbicella franksi,species_cover_share,24.880160880481103,percent_of_outplant_cover,63,218,NA,NA,Species area m2: 0.09013
-species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Acropora cervicornis,species_cover_share,2.5344805181262364,percent_of_outplant_cover,12,222,NA,NA,Species area m2: 0.007899
-species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Acropora palmata,species_cover_share,37.54377746369058,percent_of_outplant_cover,16,222,NA,NA,Species area m2: 0.11701
-species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Orbicella annularis,species_cover_share,30.188441626572416,percent_of_outplant_cover,100,222,NA,NA,Species area m2: 0.094086
-species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Orbicella faveolata,species_cover_share,6.941264801715968,percent_of_outplant_cover,29,222,NA,NA,Species area m2: 0.021633
-species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Orbicella franksi,species_cover_share,22.561817869707998,percent_of_outplant_cover,63,222,NA,NA,Species area m2: 0.070316
-species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Orbicella sp.,species_cover_share,0.23021772018680528,percent_of_outplant_cover,2,222,NA,NA,Species area m2: 0.000718
-species_month,Plot E,all,Plot E,September,5,September,NA,NA,NA,Acropora palmata,species_cover_share,52.044863293205466,percent_of_outplant_cover,6,55,NA,NA,Species area m2: 0.040812
-species_month,Plot E,all,Plot E,September,5,September,NA,NA,NA,Orbicella annularis,species_cover_share,31.247768312589265,percent_of_outplant_cover,25,55,NA,NA,Species area m2: 0.024503
-species_month,Plot E,all,Plot E,September,5,September,NA,NA,NA,Orbicella faveolata,species_cover_share,2.9455085696796575,percent_of_outplant_cover,3,55,NA,NA,Species area m2: 0.00231
-species_month,Plot E,all,Plot E,September,5,September,NA,NA,NA,Orbicella franksi,species_cover_share,12.752499489900021,percent_of_outplant_cover,19,55,NA,NA,Species area m2: 0.01
-species_month,Plot E,all,Plot E,September,5,September,NA,NA,NA,Orbicella sp.,species_cover_share,1.0093603346255866,percent_of_outplant_cover,2,55,NA,NA,Species area m2: 0.000792
-species_month,Plot E,all,Plot E,October,6,October,NA,NA,NA,Acropora palmata,species_cover_share,50.68132316690105,percent_of_outplant_cover,6,54,NA,NA,Species area m2: 0.039732
-species_month,Plot E,all,Plot E,October,6,October,NA,NA,NA,Orbicella annularis,species_cover_share,32.88368874389712,percent_of_outplant_cover,25,54,NA,NA,Species area m2: 0.025779
-species_month,Plot E,all,Plot E,October,6,October,NA,NA,NA,Orbicella faveolata,species_cover_share,3.257531546873057,percent_of_outplant_cover,3,54,NA,NA,Species area m2: 0.002554
-species_month,Plot E,all,Plot E,October,6,October,NA,NA,NA,Orbicella franksi,species_cover_share,12.771500824348411,percent_of_outplant_cover,19,54,NA,NA,Species area m2: 0.010012
-species_month,Plot E,all,Plot E,October,6,October,NA,NA,NA,Orbicella sp.,species_cover_share,0.40595571798036234,percent_of_outplant_cover,1,54,NA,NA,Species area m2: 0.000318
-species_month,Plot E,all,Plot E,November,7,November,NA,NA,NA,Acropora palmata,species_cover_share,56.28089565707097,percent_of_outplant_cover,6,56,NA,NA,Species area m2: 0.042723
-species_month,Plot E,all,Plot E,November,7,November,NA,NA,NA,Orbicella annularis,species_cover_share,25.691683984152448,percent_of_outplant_cover,25,56,NA,NA,Species area m2: 0.019503
-species_month,Plot E,all,Plot E,November,7,November,NA,NA,NA,Orbicella faveolata,species_cover_share,3.150410185645644,percent_of_outplant_cover,3,56,NA,NA,Species area m2: 0.002392
-species_month,Plot E,all,Plot E,November,7,November,NA,NA,NA,Orbicella franksi,species_cover_share,13.617636500759119,percent_of_outplant_cover,19,56,NA,NA,Species area m2: 0.010337
-species_month,Plot E,all,Plot E,November,7,November,NA,NA,NA,Orbicella sp.,species_cover_share,1.2593736723718316,percent_of_outplant_cover,3,56,NA,NA,Species area m2: 0.000956
+species_month,Plot E,all,Plot E,May,1,May,NA,NA,NA,Acropora cervicornis,species_cover_share,3.1501457686730516,percent_of_outplant_cover,14,271,NA,NA,Species area m2: 0.008782
+species_month,Plot E,all,Plot E,May,1,May,NA,NA,NA,Acropora palmata,species_cover_share,36.88570677853475,percent_of_outplant_cover,55,271,NA,NA,Species area m2: 0.10283
+species_month,Plot E,all,Plot E,May,1,May,NA,NA,NA,Orbicella annularis,species_cover_share,35.25126824574509,percent_of_outplant_cover,110,271,NA,NA,Species area m2: 0.098274
+species_month,Plot E,all,Plot E,May,1,May,NA,NA,NA,Orbicella faveolata,species_cover_share,6.996896306506097,percent_of_outplant_cover,29,271,NA,NA,Species area m2: 0.019506
+species_month,Plot E,all,Plot E,May,1,May,NA,NA,NA,Orbicella franksi,species_cover_share,17.715982900541018,percent_of_outplant_cover,63,271,NA,NA,Species area m2: 0.049389
+species_month,Plot E,all,Plot E,June,2,June,NA,NA,NA,Acropora cervicornis,species_cover_share,3.7533230369344217,percent_of_outplant_cover,12,239,NA,NA,Species area m2: 0.009198
+species_month,Plot E,all,Plot E,June,2,June,NA,NA,NA,Acropora palmata,species_cover_share,23.172916254368662,percent_of_outplant_cover,25,239,NA,NA,Species area m2: 0.05679
+species_month,Plot E,all,Plot E,June,2,June,NA,NA,NA,Orbicella annularis,species_cover_share,42.24454695504745,percent_of_outplant_cover,110,239,NA,NA,Species area m2: 0.103528
+species_month,Plot E,all,Plot E,June,2,June,NA,NA,NA,Orbicella faveolata,species_cover_share,8.392109177192596,percent_of_outplant_cover,29,239,NA,NA,Species area m2: 0.020567
+species_month,Plot E,all,Plot E,June,2,June,NA,NA,NA,Orbicella franksi,species_cover_share,22.437104576456885,percent_of_outplant_cover,63,239,NA,NA,Species area m2: 0.054986
+species_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,Acropora cervicornis,species_cover_share,4.29463771438797,percent_of_outplant_cover,12,218,NA,NA,Species area m2: 0.0096
+species_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,Acropora palmata,species_cover_share,22.03419023280003,percent_of_outplant_cover,19,218,NA,NA,Species area m2: 0.049253
+species_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,Orbicella annularis,species_cover_share,37.8852832130095,percent_of_outplant_cover,95,218,NA,NA,Species area m2: 0.084684
+species_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,Orbicella faveolata,species_cover_share,9.665870721327794,percent_of_outplant_cover,29,218,NA,NA,Species area m2: 0.021606
+species_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,Orbicella franksi,species_cover_share,26.1200181184747,percent_of_outplant_cover,63,218,NA,NA,Species area m2: 0.058386
+species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Acropora cervicornis,species_cover_share,3.363752890425717,percent_of_outplant_cover,12,222,NA,NA,Species area m2: 0.007899
+species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Acropora palmata,species_cover_share,24.52848267022105,percent_of_outplant_cover,16,222,NA,NA,Species area m2: 0.057599
+species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Orbicella annularis,species_cover_share,37.91589127315002,percent_of_outplant_cover,100,222,NA,NA,Species area m2: 0.089037
+species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Orbicella faveolata,species_cover_share,9.212420207216379,percent_of_outplant_cover,29,222,NA,NA,Species area m2: 0.021633
+species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Orbicella franksi,species_cover_share,24.673908877599253,percent_of_outplant_cover,63,222,NA,NA,Species area m2: 0.057941
+species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Orbicella sp.,species_cover_share,0.30554408138757466,percent_of_outplant_cover,2,222,NA,NA,Species area m2: 0.000718
+species_month,Plot E,all,Plot E,September,5,September,NA,NA,NA,Acropora palmata,species_cover_share,57.04012998130646,percent_of_outplant_cover,6,55,NA,NA,Species area m2: 0.040812
+species_month,Plot E,all,Plot E,September,5,September,NA,NA,NA,Orbicella annularis,species_cover_share,24.64892817833994,percent_of_outplant_cover,25,55,NA,NA,Species area m2: 0.017636
+species_month,Plot E,all,Plot E,September,5,September,NA,NA,NA,Orbicella faveolata,species_cover_share,3.22821852233617,percent_of_outplant_cover,3,55,NA,NA,Species area m2: 0.00231
+species_month,Plot E,all,Plot E,September,5,September,NA,NA,NA,Orbicella franksi,species_cover_share,13.97648456471986,percent_of_outplant_cover,19,55,NA,NA,Species area m2: 0.01
+species_month,Plot E,all,Plot E,September,5,September,NA,NA,NA,Orbicella sp.,species_cover_share,1.1062387532975768,percent_of_outplant_cover,2,55,NA,NA,Species area m2: 0.000792
+species_month,Plot E,all,Plot E,October,6,October,NA,NA,NA,Acropora palmata,species_cover_share,55.44713007801052,percent_of_outplant_cover,6,54,NA,NA,Species area m2: 0.039732
+species_month,Plot E,all,Plot E,October,6,October,NA,NA,NA,Orbicella annularis,species_cover_share,26.572421396374395,percent_of_outplant_cover,25,54,NA,NA,Species area m2: 0.019041
+species_month,Plot E,all,Plot E,October,6,October,NA,NA,NA,Orbicella faveolata,species_cover_share,3.563852798749599,percent_of_outplant_cover,3,54,NA,NA,Species area m2: 0.002554
+species_month,Plot E,all,Plot E,October,6,October,NA,NA,NA,Orbicella franksi,species_cover_share,13.97246605356071,percent_of_outplant_cover,19,54,NA,NA,Species area m2: 0.010012
+species_month,Plot E,all,Plot E,October,6,October,NA,NA,NA,Orbicella sp.,species_cover_share,0.4441296733047713,percent_of_outplant_cover,1,54,NA,NA,Species area m2: 0.000318
+species_month,Plot E,all,Plot E,November,7,November,NA,NA,NA,Acropora palmata,species_cover_share,57.11950799672443,percent_of_outplant_cover,6,56,NA,NA,Species area m2: 0.042723
+species_month,Plot E,all,Plot E,November,7,November,NA,NA,NA,Orbicella annularis,species_cover_share,24.584454434547187,percent_of_outplant_cover,25,56,NA,NA,Species area m2: 0.018388
+species_month,Plot E,all,Plot E,November,7,November,NA,NA,NA,Orbicella faveolata,species_cover_share,3.1973528084629916,percent_of_outplant_cover,3,56,NA,NA,Species area m2: 0.002392
+species_month,Plot E,all,Plot E,November,7,November,NA,NA,NA,Orbicella franksi,species_cover_share,13.820545816133832,percent_of_outplant_cover,19,56,NA,NA,Species area m2: 0.010337
+species_month,Plot E,all,Plot E,November,7,November,NA,NA,NA,Orbicella sp.,species_cover_share,1.2781389441315576,percent_of_outplant_cover,3,56,NA,NA,Species area m2: 0.000956
 species_month,Plot E,all,Plot E,May,1,May,NA,NA,NA,Acropora cervicornis,species_prevalence,5.166051660516605,percent_of_present_outplants,14,271,NA,NA,Species area m2: 0.008782
-species_month,Plot E,all,Plot E,May,1,May,NA,NA,NA,Acropora palmata,species_prevalence,20.29520295202952,percent_of_present_outplants,55,271,NA,NA,Species area m2: 0.106123
+species_month,Plot E,all,Plot E,May,1,May,NA,NA,NA,Acropora palmata,species_prevalence,20.29520295202952,percent_of_present_outplants,55,271,NA,NA,Species area m2: 0.10283
 species_month,Plot E,all,Plot E,May,1,May,NA,NA,NA,Orbicella annularis,species_prevalence,40.59040590405904,percent_of_present_outplants,110,271,NA,NA,Species area m2: 0.098274
 species_month,Plot E,all,Plot E,May,1,May,NA,NA,NA,Orbicella faveolata,species_prevalence,10.70110701107011,percent_of_present_outplants,29,271,NA,NA,Species area m2: 0.019506
 species_month,Plot E,all,Plot E,May,1,May,NA,NA,NA,Orbicella franksi,species_prevalence,23.247232472324722,percent_of_present_outplants,63,271,NA,NA,Species area m2: 0.049389
 species_month,Plot E,all,Plot E,June,2,June,NA,NA,NA,Acropora cervicornis,species_prevalence,5.02092050209205,percent_of_present_outplants,12,239,NA,NA,Species area m2: 0.009198
 species_month,Plot E,all,Plot E,June,2,June,NA,NA,NA,Acropora palmata,species_prevalence,10.460251046025105,percent_of_present_outplants,25,239,NA,NA,Species area m2: 0.05679
-species_month,Plot E,all,Plot E,June,2,June,NA,NA,NA,Orbicella annularis,species_prevalence,46.02510460251046,percent_of_present_outplants,110,239,NA,NA,Species area m2: 0.128647
+species_month,Plot E,all,Plot E,June,2,June,NA,NA,NA,Orbicella annularis,species_prevalence,46.02510460251046,percent_of_present_outplants,110,239,NA,NA,Species area m2: 0.103528
 species_month,Plot E,all,Plot E,June,2,June,NA,NA,NA,Orbicella faveolata,species_prevalence,12.133891213389122,percent_of_present_outplants,29,239,NA,NA,Species area m2: 0.020567
-species_month,Plot E,all,Plot E,June,2,June,NA,NA,NA,Orbicella franksi,species_prevalence,26.359832635983263,percent_of_present_outplants,63,239,NA,NA,Species area m2: 0.065103
-species_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,Acropora cervicornis,species_prevalence,5.504587155963303,percent_of_present_outplants,12,218,NA,NA,Species area m2: 0.010906
-species_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,Acropora palmata,species_prevalence,8.715596330275229,percent_of_present_outplants,19,218,NA,NA,Species area m2: 0.104931
-species_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,Orbicella annularis,species_prevalence,43.57798165137615,percent_of_present_outplants,95,218,NA,NA,Species area m2: 0.127526
-species_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,Orbicella faveolata,species_prevalence,13.302752293577981,percent_of_present_outplants,29,218,NA,NA,Species area m2: 0.028763
-species_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,Orbicella franksi,species_prevalence,28.89908256880734,percent_of_present_outplants,63,218,NA,NA,Species area m2: 0.09013
+species_month,Plot E,all,Plot E,June,2,June,NA,NA,NA,Orbicella franksi,species_prevalence,26.359832635983263,percent_of_present_outplants,63,239,NA,NA,Species area m2: 0.054986
+species_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,Acropora cervicornis,species_prevalence,5.504587155963303,percent_of_present_outplants,12,218,NA,NA,Species area m2: 0.0096
+species_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,Acropora palmata,species_prevalence,8.715596330275229,percent_of_present_outplants,19,218,NA,NA,Species area m2: 0.049253
+species_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,Orbicella annularis,species_prevalence,43.57798165137615,percent_of_present_outplants,95,218,NA,NA,Species area m2: 0.084684
+species_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,Orbicella faveolata,species_prevalence,13.302752293577981,percent_of_present_outplants,29,218,NA,NA,Species area m2: 0.021606
+species_month,Plot E,all,Plot E,July,3,July,NA,NA,NA,Orbicella franksi,species_prevalence,28.89908256880734,percent_of_present_outplants,63,218,NA,NA,Species area m2: 0.058386
 species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Acropora cervicornis,species_prevalence,5.405405405405405,percent_of_present_outplants,12,222,NA,NA,Species area m2: 0.007899
-species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Acropora palmata,species_prevalence,7.207207207207207,percent_of_present_outplants,16,222,NA,NA,Species area m2: 0.11701
-species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Orbicella annularis,species_prevalence,45.04504504504504,percent_of_present_outplants,100,222,NA,NA,Species area m2: 0.094086
+species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Acropora palmata,species_prevalence,7.207207207207207,percent_of_present_outplants,16,222,NA,NA,Species area m2: 0.057599
+species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Orbicella annularis,species_prevalence,45.04504504504504,percent_of_present_outplants,100,222,NA,NA,Species area m2: 0.089037
 species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Orbicella faveolata,species_prevalence,13.063063063063064,percent_of_present_outplants,29,222,NA,NA,Species area m2: 0.021633
-species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Orbicella franksi,species_prevalence,28.37837837837838,percent_of_present_outplants,63,222,NA,NA,Species area m2: 0.070316
+species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Orbicella franksi,species_prevalence,28.37837837837838,percent_of_present_outplants,63,222,NA,NA,Species area m2: 0.057941
 species_month,Plot E,all,Plot E,August,4,August,NA,NA,NA,Orbicella sp.,species_prevalence,0.9009009009009009,percent_of_present_outplants,2,222,NA,NA,Species area m2: 0.000718
 species_month,Plot E,all,Plot E,September,5,September,NA,NA,NA,Acropora palmata,species_prevalence,10.909090909090908,percent_of_present_outplants,6,55,NA,NA,Species area m2: 0.040812
-species_month,Plot E,all,Plot E,September,5,September,NA,NA,NA,Orbicella annularis,species_prevalence,45.45454545454545,percent_of_present_outplants,25,55,NA,NA,Species area m2: 0.024503
+species_month,Plot E,all,Plot E,September,5,September,NA,NA,NA,Orbicella annularis,species_prevalence,45.45454545454545,percent_of_present_outplants,25,55,NA,NA,Species area m2: 0.017636
 species_month,Plot E,all,Plot E,September,5,September,NA,NA,NA,Orbicella faveolata,species_prevalence,5.454545454545454,percent_of_present_outplants,3,55,NA,NA,Species area m2: 0.00231
 species_month,Plot E,all,Plot E,September,5,September,NA,NA,NA,Orbicella franksi,species_prevalence,34.54545454545455,percent_of_present_outplants,19,55,NA,NA,Species area m2: 0.01
 species_month,Plot E,all,Plot E,September,5,September,NA,NA,NA,Orbicella sp.,species_prevalence,3.6363636363636362,percent_of_present_outplants,2,55,NA,NA,Species area m2: 0.000792
 species_month,Plot E,all,Plot E,October,6,October,NA,NA,NA,Acropora palmata,species_prevalence,11.11111111111111,percent_of_present_outplants,6,54,NA,NA,Species area m2: 0.039732
-species_month,Plot E,all,Plot E,October,6,October,NA,NA,NA,Orbicella annularis,species_prevalence,46.2962962962963,percent_of_present_outplants,25,54,NA,NA,Species area m2: 0.025779
+species_month,Plot E,all,Plot E,October,6,October,NA,NA,NA,Orbicella annularis,species_prevalence,46.2962962962963,percent_of_present_outplants,25,54,NA,NA,Species area m2: 0.019041
 species_month,Plot E,all,Plot E,October,6,October,NA,NA,NA,Orbicella faveolata,species_prevalence,5.555555555555555,percent_of_present_outplants,3,54,NA,NA,Species area m2: 0.002554
 species_month,Plot E,all,Plot E,October,6,October,NA,NA,NA,Orbicella franksi,species_prevalence,35.18518518518518,percent_of_present_outplants,19,54,NA,NA,Species area m2: 0.010012
 species_month,Plot E,all,Plot E,October,6,October,NA,NA,NA,Orbicella sp.,species_prevalence,1.8518518518518519,percent_of_present_outplants,1,54,NA,NA,Species area m2: 0.000318
 species_month,Plot E,all,Plot E,November,7,November,NA,NA,NA,Acropora palmata,species_prevalence,10.714285714285714,percent_of_present_outplants,6,56,NA,NA,Species area m2: 0.042723
-species_month,Plot E,all,Plot E,November,7,November,NA,NA,NA,Orbicella annularis,species_prevalence,44.642857142857146,percent_of_present_outplants,25,56,NA,NA,Species area m2: 0.019503
+species_month,Plot E,all,Plot E,November,7,November,NA,NA,NA,Orbicella annularis,species_prevalence,44.642857142857146,percent_of_present_outplants,25,56,NA,NA,Species area m2: 0.018388
 species_month,Plot E,all,Plot E,November,7,November,NA,NA,NA,Orbicella faveolata,species_prevalence,5.357142857142857,percent_of_present_outplants,3,56,NA,NA,Species area m2: 0.002392
 species_month,Plot E,all,Plot E,November,7,November,NA,NA,NA,Orbicella franksi,species_prevalence,33.92857142857143,percent_of_present_outplants,19,56,NA,NA,Species area m2: 0.010337
 species_month,Plot E,all,Plot E,November,7,November,NA,NA,NA,Orbicella sp.,species_prevalence,5.357142857142857,percent_of_present_outplants,3,56,NA,NA,Species area m2: 0.000956

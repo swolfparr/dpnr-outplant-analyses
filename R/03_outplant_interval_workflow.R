@@ -372,6 +372,20 @@ outplant_build_interval_rows <- function(config) {
 }
 
 # Coral-level interval summaries ------------------------------------------------
+outplant_sum_unique_blob_area <- function(blob, area) {
+  keep <- !is.na(area) & area > 0
+
+  if (!any(keep)) {
+    return(0)
+  }
+
+  blob_key <- as.character(blob)
+  missing_blob <- is.na(blob_key) | blob_key == "" | blob_key == "-1"
+  blob_key[missing_blob] <- str_c("row_", seq_along(blob_key))[missing_blob]
+
+  sum(vapply(split(area[keep], blob_key[keep]), max, numeric(1), na.rm = TRUE), na.rm = TRUE)
+}
+
 # Some files can contain repeated rows for the same TagLab Genet because of
 # split/fuse events or multiple blob pieces. Grouping by Genet makes one row per tracked outplant per interval before calculating survivorship.
 outplant_build_coral_intervals <- function(interval_rows) {
@@ -391,10 +405,10 @@ outplant_build_coral_intervals <- function(interval_rows) {
       n_rows = n(),
       plot_area_m2 = first(plot_area_m2),
       taglab_area_units = first(taglab_area_units),
-      area_start = sum(area_start, na.rm = TRUE),
-      area_end = sum(area_end, na.rm = TRUE),
-      area_start_m2 = sum(area_start_m2, na.rm = TRUE),
-      area_end_m2 = sum(area_end_m2, na.rm = TRUE),
+      area_start = outplant_sum_unique_blob_area(blob_start, area_start),
+      area_end = outplant_sum_unique_blob_area(blob_end, area_end),
+      area_start_m2 = outplant_sum_unique_blob_area(blob_start, area_start_m2),
+      area_end_m2 = outplant_sum_unique_blob_area(blob_end, area_end_m2),
       present_start = any(present_start, na.rm = TRUE),
       present_end = any(present_end, na.rm = TRUE),
       survived_interval = present_start & present_end,

@@ -1,17 +1,112 @@
 ---
 title: "DPNR Outplant Analyses"
+page-layout: full
+toc: false
 ---
 
-This website contains the DPNR coral outplant monitoring workflow and rendered analysis report.
+<style>
+#title-block-header {
+  display: none;
+}
+</style>
 
-## Start Here
+<section class="site-hero" aria-labelledby="home-title">
+<div class="site-hero__content">
+<p class="site-kicker">Coral outplant monitoring</p>
+<h1 id="home-title">DPNR Outplant Analyses</h1>
+<p class="site-hero__lede">A field-ready reporting hub for coral survivorship, outplant cover, species composition, and whole-plot coral-cover checks.</p>
+<div class="site-hero__actions" aria-label="Primary pages">
+<a class="site-button site-button--primary" href="coral_survivorship_report.html">Open Analysis Report</a>
+<a class="site-button site-button--secondary" href="all_coral_cover.html">View All Coral Cover</a>
+</div>
+<div class="site-hero__chips" aria-label="Current report scope">
+<span>Plot C</span>
+<span>Plot E</span>
+<span>Plot G</span>
+<span>QA checked</span>
+</div>
+</div>
+</section>
 
-- Open the [Analysis Report](coral_survivorship_report.qmd) to view survivorship, cover, and species-composition results.
-- Open [All Coral Cover](all_coral_cover.qmd) to view whole-plot coral cover for all coral annotations across the configured plots.
-- Edit the plot-specific files under `config/outplant_interval_files/` for outplant matches or `config/all_coral_survey_files/` for whole-plot coral surveys.
-- Render the website after adding or changing data.
+<section class="home-band home-band--metrics" aria-label="Project snapshot">
+<div class="metric-strip">
+<div class="metric-tile metric-tile--teal"><span>3</span><p>active outplant plots</p></div>
+<div class="metric-tile metric-tile--coral"><span>8</span><p>plot config templates</p></div>
+<div class="metric-tile metric-tile--gold"><span>2</span><p>analysis workflows</p></div>
+<div class="metric-tile metric-tile--blue"><span>1</span><p>GitHub-ready site</p></div>
+</div>
+</section>
 
-## Recommended Outputs
+<section class="home-band home-band--intro" aria-label="Project overview">
+<div class="home-grid home-grid--three">
+<article class="home-feature">
+<i class="bi bi-graph-up-arrow home-feature__icon" aria-hidden="true"></i>
+<p class="home-feature__label">Start here</p>
+<h2>Analysis Report</h2>
+<p>Presentation-ready survivorship, interval survival, cover, species prevalence, QA/QC, and plot-specific tabs.</p>
+<a href="coral_survivorship_report.html">Go to report</a>
+</article>
+<article class="home-feature">
+<i class="bi bi-grid-3x3-gap home-feature__icon" aria-hidden="true"></i>
+<p class="home-feature__label">Whole plot</p>
+<h2>All Coral Cover</h2>
+<p>Coral-cover summaries for all annotations across configured plot surveys, separate from the outplant-only workflow.</p>
+<a href="all_coral_cover.html">Review cover</a>
+</article>
+<article class="home-feature">
+<i class="bi bi-check2-circle home-feature__icon" aria-hidden="true"></i>
+<p class="home-feature__label">Before pushing</p>
+<h2>Publish Check</h2>
+<p>Run a quick local check after rendering so missing outputs, QA files, or remote issues are caught before GitHub.</p>
+<code>Rscript scripts/pre_push_check.R</code>
+</article>
+</div>
+</section>
 
-- `data_processed/outplant_master_tracking_dataset.csv`
-- `outputs/Tables/outplant_master_summary_dataset.csv`
+<section class="home-band home-band--reef" aria-label="Analysis highlights">
+<div class="home-section-heading">
+<p class="site-kicker">What this site tracks</p>
+<h2>A cleaner view of survivorship, cover, and species change</h2>
+</div>
+<div class="reef-grid">
+<article class="reef-card reef-card--survival">
+<span>Survival</span>
+<h3>Cumulative and interval survivorship</h3>
+<p>Baseline survival curves and month-to-month diagnostic checks stay side by side.</p>
+</article>
+<article class="reef-card reef-card--cover">
+<span>Cover</span>
+<h3>Outplant and whole-plot cover</h3>
+<p>Small outplant cover signals and all-coral plot cover are separated so each stays interpretable.</p>
+</article>
+<article class="reef-card reef-card--qa">
+<span>QA/QC</span>
+<h3>File checks before interpretation</h3>
+<p>Configured files, shared-month continuity, Genet identity, and missing values remain visible.</p>
+</article>
+</div>
+</section>
+
+<section class="home-band" aria-label="Update workflow">
+<div class="home-section-heading">
+<p class="site-kicker">Update flow</p>
+<h2>From TagLab exports to GitHub Pages</h2>
+</div>
+<ol class="workflow-list">
+<li><span>01</span><p>Edit plot config rows under <code>config/outplant_interval_files/</code> or <code>config/all_coral_survey_files/</code>.</p></li>
+<li><span>02</span><p>Render the Quarto website so processed data, output tables, figures, and <code>docs/</code> are rebuilt together.</p></li>
+<li><span>03</span><p>Review file-audit and QA/QC tables before interpreting the plots or publishing the update.</p></li>
+<li><span>04</span><p>Run <code>Rscript scripts/pre_push_check.R</code>, then commit and push source, outputs, and rendered site files.</p></li>
+</ol>
+</section>
+
+<section class="home-band home-band--outputs" aria-label="Recommended outputs">
+<div class="home-section-heading">
+<p class="site-kicker">Recommended outputs</p>
+<h2>Open these first</h2>
+</div>
+<div class="output-strip">
+<code>data_processed/outplant_master_tracking_dataset.csv</code>
+<code>outputs/Tables/outplant_master_summary_dataset.csv</code>
+</div>
+</section>

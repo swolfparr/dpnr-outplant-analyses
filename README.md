@@ -11,6 +11,21 @@ This project analyzes coral outplant survivorship, cover, and species compositio
 
 The report and R script automatically find the project folder by looking for `config/outplant_interval_files/`, so users should not need to edit hard-coded working-directory paths.
 
+If rendering from the Terminal is easier, use the Quarto copy bundled with RStudio:
+
+```bash
+/Applications/RStudio.app/Contents/Resources/app/quarto/bin/quarto render
+```
+
+The easiest local render command is:
+
+```bash
+bash scripts/render_site.sh
+```
+
+That command renders the real project root and checks that the custom homepage
+was written to `docs/index.html`.
+
 ## Main Files
 
 - `coral_survivorship_report.qmd`: Quarto report with tabs, figures, tables, and code dropdowns.
@@ -29,5 +44,16 @@ The report and R script automatically find the project folder by looking for `co
 5. Spencer copies the matches CSVs and new config rows into the local project.
 6. Render `coral_survivorship_report.qmd`.
 7. Check the file audit and QA/QC tables before committing and pushing the update.
+8. Run `Rscript scripts/pre_push_check.R` before pushing to confirm the rendered website and main outputs are present.
 
 See the detailed **SOP** tab in the website for the full Teams-to-GitHub steps.
+
+## Before Pushing to GitHub
+
+Run this quick check from the project folder:
+
+```bash
+Rscript scripts/pre_push_check.R
+```
+
+The check confirms the expected GitHub remote, important rendered pages, main output tables, and QA file-audit results. It also prints the current Git status so it is clear what still needs to be staged or committed.

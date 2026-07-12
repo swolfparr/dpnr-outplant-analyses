@@ -2,7 +2,9 @@
 title: "DPNR Outplant Analyses"
 format:
   html:
-    theme: cosmo
+    theme:
+      - cosmo
+      - styles.scss
     toc: false
     code-fold: true
     embed-resources: false
@@ -63,9 +65,17 @@ source(file.path(project_root, "R", "03_outplant_interval_workflow.R"))
 ::: panel-tabset
 ## Home
 
-This report analyzes DPNR coral outplant monitoring data from TagLab match files. The workflow is designed for repeated use: add new plot/month files to the config, render the report, and the tables and figures rebuild automatically.
+This report analyzes DPNR coral outplant monitoring data from TagLab match files. The workflow is designed for repeated use: add new plot/month files to the config, render the report, review the QA/QC checks, and the tables and figures rebuild automatically.
 
 The active outplant workflow now combines TagLab subsections into one plot-level result for each plot letter. Section-level information is still used for file intake and QA/QC, but survivorship, cover, species prevalence, and species cover composition are summarized as Plot C, Plot E, Plot G, and so on.
+
+::: {.callout-note appearance="simple"}
+## Start with these tabs
+
+-   Use **Analysis Report** for the presentation-ready summary figures and tables.
+-   Use the individual **Plot C**, **Plot E**, and **Plot G** tabs when checking plot-specific files, QA/QC, and downloads.
+-   Use **SOP** when adding new TagLab exports or preparing a GitHub update.
+:::
 
 The two recommended datasets to open first are:
 
@@ -229,6 +239,7 @@ Equivalent R-Studio Terminal commands if that is easier for you are:
 
 ``` bash
 git status
+Rscript scripts/pre_push_check.R
 git add .
 git commit -m "Describe the plot and interval added"
 git push
@@ -448,6 +459,7 @@ Plot E has enough monthly observations to work well as a date-based time series.
 #| label: outplant-plot-e-cumulative-survival-plot
 #| fig-width: 9
 #| fig-height: 4.8
+#| fig-alt: "Line plot of Plot E cumulative outplant survivorship over survey dates, with points and confidence intervals for each monitoring month and a red temperature overlay."
 
 outplant_plot_cumulative_survival(
   outplant_cumulative_survival_summary %>% filter(plot == "Plot E"),
@@ -461,6 +473,7 @@ outplant_plot_cumulative_survival(
 #| label: outplant-short-cumulative-survival-plot
 #| fig-width: 9
 #| fig-height: 4.8
+#| fig-alt: "Faceted line plot showing Plot C and Plot G cumulative outplant survivorship by baseline and follow-up monitoring step, with confidence intervals."
 
 outplant_plot_short_cumulative_survival(
   outplant_cumulative_survival_summary %>% filter(plot %in% c("Plot C", "Plot G"))
@@ -509,6 +522,7 @@ Plot E interval survivorship is shown as a time series. Plot C and Plot G are sh
 #| label: outplant-plot-e-interval-survival-plot
 #| fig-width: 9
 #| fig-height: 4.8
+#| fig-alt: "Line plot of Plot E interval survivorship between adjacent survey months, with percentage labels and confidence intervals."
 
 outplant_plot_interval_survival(
   outplant_survival_summary %>% filter(plot == "Plot E")
@@ -521,6 +535,7 @@ outplant_plot_interval_survival(
 #| label: outplant-short-interval-survival-plot
 #| fig-width: 9
 #| fig-height: 4.8
+#| fig-alt: "Faceted bar plot showing Plot C and Plot G interval survivorship for post-baseline monitoring intervals, with confidence intervals."
 
 outplant_plot_short_interval_survival(
   outplant_survival_summary %>% filter(plot %in% c("Plot C", "Plot G"))
@@ -556,6 +571,7 @@ This chunk plots outplant cover through time. Because outplants are small relati
 #| label: outplant-cover-plot
 #| fig-width: 8
 #| fig-height: 4.8
+#| fig-alt: "Line plot of outplant coral cover through time, showing percent of plot area covered by present outplants."
 
 outplant_cover_plot
 ```
@@ -598,6 +614,7 @@ This chunk plots species prevalence through time using counts of present outplan
 #| label: outplant-species-prevalence-plot
 #| fig-width: 8
 #| fig-height: 4.8
+#| fig-alt: "Stacked bar plot of outplant species prevalence by survey month, showing each species as a share of present outplant annotations."
 
 outplant_species_prevalence_plot
 ```
@@ -610,6 +627,7 @@ This chunk plots each species' share of total outplant cover through time. It co
 #| label: outplant-species-cover-plot
 #| fig-width: 8
 #| fig-height: 4.8
+#| fig-alt: "Stacked bar plot of outplant cover composition by survey month, showing each species as a share of summed outplant cover."
 
 outplant_species_cover_plot
 ```
@@ -930,6 +948,7 @@ outplant_cumulative_survival_summary %>%
 #| label: plot-c-cumulative-survival-plot
 #| fig-width: 8
 #| fig-height: 4.5
+#| fig-alt: "Line plot of Plot C cumulative outplant survivorship over survey dates with confidence intervals and temperature overlay."
 
 outplant_plot_cumulative_survival(
   outplant_cumulative_survival_summary %>% filter(plot == "Plot C"),
@@ -972,6 +991,7 @@ outplant_survival_summary %>%
 #| label: plot-c-interval-survival-plot
 #| fig-width: 8
 #| fig-height: 4.5
+#| fig-alt: "Line plot of Plot C interval survivorship between adjacent survey months with confidence intervals."
 
 outplant_plot_interval_survival(
   outplant_survival_summary %>% filter(plot == "Plot C")
@@ -1002,6 +1022,7 @@ outplant_cover_summary %>%
 #| label: plot-c-cover-plot
 #| fig-width: 8
 #| fig-height: 4.5
+#| fig-alt: "Line plot of Plot C outplant cover through time as a percent of plot area."
 
 outplant_plot_cover(
   outplant_cover_summary %>% filter(plot == "Plot C")
@@ -1041,6 +1062,7 @@ outplant_species_prevalence_summary %>%
 #| label: plot-c-species-prevalence-plot
 #| fig-width: 8
 #| fig-height: 4.5
+#| fig-alt: "Stacked bar plot of Plot C outplant species prevalence by survey month."
 
 outplant_plot_species_prevalence(
   outplant_species_prevalence_summary %>% filter(plot == "Plot C")
@@ -1053,6 +1075,7 @@ outplant_plot_species_prevalence(
 #| label: plot-c-species-cover-plot
 #| fig-width: 8
 #| fig-height: 4.5
+#| fig-alt: "Stacked bar plot of Plot C outplant cover composition by species and survey month."
 
 outplant_plot_species_cover(
   outplant_species_prevalence_summary %>% filter(plot == "Plot C")
@@ -1403,6 +1426,7 @@ outplant_cumulative_survival_summary %>%
 #| label: plot-g-cumulative-survival-plot
 #| fig-width: 8
 #| fig-height: 4.5
+#| fig-alt: "Line plot of Plot G cumulative outplant survivorship over survey dates with confidence intervals and temperature overlay."
 
 outplant_plot_short_cumulative_survival(
   outplant_cumulative_survival_summary %>% filter(plot == "Plot G")
@@ -1444,6 +1468,7 @@ outplant_survival_summary %>%
 #| label: plot-g-interval-survival-plot
 #| fig-width: 8
 #| fig-height: 4.5
+#| fig-alt: "Line plot of Plot G interval survivorship between adjacent survey months with confidence intervals."
 
 outplant_plot_short_interval_survival(
   outplant_survival_summary %>% filter(plot == "Plot G")
@@ -1474,6 +1499,7 @@ outplant_cover_summary %>%
 #| label: plot-g-cover-plot
 #| fig-width: 8
 #| fig-height: 4.5
+#| fig-alt: "Line plot of Plot G outplant cover through time as a percent of plot area."
 
 outplant_plot_cover(
   outplant_cover_summary %>% filter(plot == "Plot G")
@@ -1513,6 +1539,7 @@ outplant_species_prevalence_summary %>%
 #| label: plot-g-species-prevalence-plot
 #| fig-width: 8
 #| fig-height: 4.5
+#| fig-alt: "Stacked bar plot of Plot G outplant species prevalence by survey month."
 
 outplant_plot_species_prevalence(
   outplant_species_prevalence_summary %>% filter(plot == "Plot G")
@@ -1525,6 +1552,7 @@ outplant_plot_species_prevalence(
 #| label: plot-g-species-cover-plot
 #| fig-width: 8
 #| fig-height: 4.5
+#| fig-alt: "Stacked bar plot of Plot G outplant cover composition by species and survey month."
 
 outplant_plot_species_cover(
   outplant_species_prevalence_summary %>% filter(plot == "Plot G")

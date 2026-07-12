@@ -181,8 +181,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Home</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">SOP</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Analysis Report</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Plot A</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">Plot B</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false">Plot C</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false">Plot D</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" role="tab" aria-controls="tabset-1-8" aria-selected="false">Plot E</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-9" role="tab" aria-controls="tabset-1-9" aria-selected="false">Plot F</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-10-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-10" role="tab" aria-controls="tabset-1-10" aria-selected="false">Plot G</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-11-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-11" role="tab" aria-controls="tabset-1-11" aria-selected="false">Plot H</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>This report analyzes DPNR coral outplant monitoring data from TagLab match files. The workflow is designed for repeated use: add new plot/month files to the config, render the report, and the tables and figures rebuild automatically.</p>
+<p>This report analyzes DPNR coral outplant monitoring data from TagLab match files. The workflow is designed for repeated use: add new plot/month files to the config, render the report, review the QA/QC checks, and the tables and figures rebuild automatically.</p>
 <p>The active outplant workflow now combines TagLab subsections into one plot-level result for each plot letter. Section-level information is still used for file intake and QA/QC, but survivorship, cover, species prevalence, and species cover composition are summarized as Plot C, Plot E, Plot G, and so on.</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Start with these tabs
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Use <strong>Analysis Report</strong> for the presentation-ready summary figures and tables.</li>
+<li>Use the individual <strong>Plot C</strong>, <strong>Plot E</strong>, and <strong>Plot G</strong> tabs when checking plot-specific files, QA/QC, and downloads.</li>
+<li>Use <strong>SOP</strong> when adding new TagLab exports or preparing a GitHub update.</li>
+</ul>
+</div>
+</div>
 <p>The two recommended datasets to open first are:</p>
 <ul>
 <li><code>data_processed/outplant_master_tracking_dataset.csv</code>: one row per tracked <code>Genet</code> per month, including presence, area, cover contribution, and baseline-survival status.</li>
@@ -335,9 +352,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>Equivalent R-Studio Terminal commands if that is easier for you are:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Describe the plot and interval added"</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> scripts/pre_push_check.R</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Describe the plot and interval added"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The GitHub repository is <code>https://github.com/CWORI/DPNR_Survivorship</code>.</p>
 <p>Please make sure this is the repository you are adding too!</p>
 </section>
@@ -938,8 +956,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">10</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">13</td>
-<td style="text-align: right;">70.040</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.000</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">1-0</td>
@@ -950,8 +968,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">6</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">25</td>
-<td style="text-align: right;">151.760</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.000</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">1-1</td>
@@ -974,8 +992,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">556.780</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.000</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">1-1</td>
@@ -986,8 +1004,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">545.685</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.000</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">1-1</td>
@@ -998,8 +1016,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">55.855</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.000</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">1-1</td>
@@ -1010,8 +1028,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">34.745</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.000</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">0-0</td>
@@ -1235,7 +1253,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="coral_survivorship_report_files/figure-html/outplant-plot-e-cumulative-survival-plot-1.svg" class="img-fluid figure-img"></p>
+<p><img src="coral_survivorship_report_files/figure-html/outplant-plot-e-cumulative-survival-plot-1.svg" class="img-fluid figure-img" alt="Line plot of Plot E cumulative outplant survivorship over survey dates, with points and confidence intervals for each monitoring month and a red temperature overlay."></p>
 </figure>
 </div>
 </div>
@@ -1247,7 +1265,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="coral_survivorship_report_files/figure-html/outplant-short-cumulative-survival-plot-1.svg" class="img-fluid figure-img"></p>
+<p><img src="coral_survivorship_report_files/figure-html/outplant-short-cumulative-survival-plot-1.svg" class="img-fluid figure-img" alt="Faceted line plot showing Plot C and Plot G cumulative outplant survivorship by baseline and follow-up monitoring step, with confidence intervals."></p>
 </figure>
 </div>
 </div>
@@ -1407,7 +1425,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="coral_survivorship_report_files/figure-html/outplant-plot-e-interval-survival-plot-1.svg" class="img-fluid figure-img"></p>
+<p><img src="coral_survivorship_report_files/figure-html/outplant-plot-e-interval-survival-plot-1.svg" class="img-fluid figure-img" alt="Line plot of Plot E interval survivorship between adjacent survey months, with percentage labels and confidence intervals."></p>
 </figure>
 </div>
 </div>
@@ -1419,7 +1437,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="coral_survivorship_report_files/figure-html/outplant-short-interval-survival-plot-1.svg" class="img-fluid figure-img"></p>
+<p><img src="coral_survivorship_report_files/figure-html/outplant-short-interval-survival-plot-1.svg" class="img-fluid figure-img" alt="Faceted bar plot showing Plot C and Plot G interval survivorship for post-baseline monitoring intervals, with confidence intervals."></p>
 </figure>
 </div>
 </div>
@@ -1461,65 +1479,65 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Plot C</td>
 <td style="text-align: left;">June</td>
 <td style="text-align: right;">530</td>
-<td style="text-align: right;">0.728634</td>
+<td style="text-align: right;">0.313673</td>
 <td style="text-align: right;">480</td>
-<td style="text-align: right;">0.15180</td>
+<td style="text-align: right;">0.06535</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
 <td style="text-align: left;">May</td>
 <td style="text-align: right;">271</td>
-<td style="text-align: right;">0.282074</td>
+<td style="text-align: right;">0.278781</td>
 <td style="text-align: right;">480</td>
-<td style="text-align: right;">0.05877</td>
+<td style="text-align: right;">0.05808</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot E</td>
 <td style="text-align: left;">June</td>
 <td style="text-align: right;">239</td>
-<td style="text-align: right;">0.280305</td>
+<td style="text-align: right;">0.245070</td>
 <td style="text-align: right;">480</td>
-<td style="text-align: right;">0.05840</td>
+<td style="text-align: right;">0.05106</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
 <td style="text-align: left;">July</td>
 <td style="text-align: right;">218</td>
-<td style="text-align: right;">0.362257</td>
+<td style="text-align: right;">0.223529</td>
 <td style="text-align: right;">480</td>
-<td style="text-align: right;">0.07547</td>
+<td style="text-align: right;">0.04657</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot E</td>
 <td style="text-align: left;">August</td>
 <td style="text-align: right;">222</td>
-<td style="text-align: right;">0.311661</td>
+<td style="text-align: right;">0.234827</td>
 <td style="text-align: right;">480</td>
-<td style="text-align: right;">0.06493</td>
+<td style="text-align: right;">0.04892</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
 <td style="text-align: left;">September</td>
 <td style="text-align: right;">55</td>
-<td style="text-align: right;">0.078416</td>
+<td style="text-align: right;">0.071549</td>
 <td style="text-align: right;">480</td>
-<td style="text-align: right;">0.01634</td>
+<td style="text-align: right;">0.01491</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot E</td>
 <td style="text-align: left;">October</td>
 <td style="text-align: right;">54</td>
-<td style="text-align: right;">0.078395</td>
+<td style="text-align: right;">0.071657</td>
 <td style="text-align: right;">480</td>
-<td style="text-align: right;">0.01633</td>
+<td style="text-align: right;">0.01493</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
 <td style="text-align: left;">November</td>
 <td style="text-align: right;">56</td>
-<td style="text-align: right;">0.075911</td>
+<td style="text-align: right;">0.074796</td>
 <td style="text-align: right;">480</td>
-<td style="text-align: right;">0.01581</td>
+<td style="text-align: right;">0.01558</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot G</td>
@@ -1548,7 +1566,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="coral_survivorship_report_files/figure-html/outplant-cover-plot-1.svg" class="img-fluid figure-img"></p>
+<p><img src="coral_survivorship_report_files/figure-html/outplant-cover-plot-1.svg" class="img-fluid figure-img" alt="Line plot of outplant coral cover through time, showing percent of plot area covered by present outplants."></p>
 </figure>
 </div>
 </div>
@@ -1641,7 +1659,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">167</td>
 <td style="text-align: right;">31.5</td>
 <td style="text-align: right;">0.064634</td>
-<td style="text-align: right;">8.9</td>
+<td style="text-align: right;">20.6</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot C</td>
@@ -1649,8 +1667,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella annularis</td>
 <td style="text-align: right;">42</td>
 <td style="text-align: right;">7.9</td>
-<td style="text-align: right;">0.360947</td>
-<td style="text-align: right;">49.5</td>
+<td style="text-align: right;">0.050798</td>
+<td style="text-align: right;">16.2</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot C</td>
@@ -1658,8 +1676,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella faveolata</td>
 <td style="text-align: right;">23</td>
 <td style="text-align: right;">4.3</td>
-<td style="text-align: right;">0.149702</td>
-<td style="text-align: right;">20.5</td>
+<td style="text-align: right;">0.046198</td>
+<td style="text-align: right;">14.7</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot C</td>
@@ -1667,8 +1685,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella franksi</td>
 <td style="text-align: right;">118</td>
 <td style="text-align: right;">22.3</td>
-<td style="text-align: right;">0.069852</td>
-<td style="text-align: right;">9.6</td>
+<td style="text-align: right;">0.068545</td>
+<td style="text-align: right;">21.9</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot C</td>
@@ -1677,7 +1695,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">180</td>
 <td style="text-align: right;">34.0</td>
 <td style="text-align: right;">0.083498</td>
-<td style="text-align: right;">11.5</td>
+<td style="text-align: right;">26.6</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot E</td>
@@ -1686,7 +1704,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">14</td>
 <td style="text-align: right;">5.2</td>
 <td style="text-align: right;">0.008782</td>
-<td style="text-align: right;">3.1</td>
+<td style="text-align: right;">3.2</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
@@ -1694,8 +1712,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Acropora palmata</td>
 <td style="text-align: right;">55</td>
 <td style="text-align: right;">20.3</td>
-<td style="text-align: right;">0.106123</td>
-<td style="text-align: right;">37.6</td>
+<td style="text-align: right;">0.102830</td>
+<td style="text-align: right;">36.9</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot E</td>
@@ -1704,7 +1722,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">110</td>
 <td style="text-align: right;">40.6</td>
 <td style="text-align: right;">0.098274</td>
-<td style="text-align: right;">34.8</td>
+<td style="text-align: right;">35.3</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
@@ -1713,7 +1731,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">29</td>
 <td style="text-align: right;">10.7</td>
 <td style="text-align: right;">0.019506</td>
-<td style="text-align: right;">6.9</td>
+<td style="text-align: right;">7.0</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot E</td>
@@ -1722,7 +1740,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">63</td>
 <td style="text-align: right;">23.2</td>
 <td style="text-align: right;">0.049389</td>
-<td style="text-align: right;">17.5</td>
+<td style="text-align: right;">17.7</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
@@ -1731,7 +1749,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">12</td>
 <td style="text-align: right;">5.0</td>
 <td style="text-align: right;">0.009198</td>
-<td style="text-align: right;">3.3</td>
+<td style="text-align: right;">3.8</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot E</td>
@@ -1740,7 +1758,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">25</td>
 <td style="text-align: right;">10.5</td>
 <td style="text-align: right;">0.056790</td>
-<td style="text-align: right;">20.3</td>
+<td style="text-align: right;">23.2</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
@@ -1748,8 +1766,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella annularis</td>
 <td style="text-align: right;">110</td>
 <td style="text-align: right;">46.0</td>
-<td style="text-align: right;">0.128647</td>
-<td style="text-align: right;">45.9</td>
+<td style="text-align: right;">0.103528</td>
+<td style="text-align: right;">42.2</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot E</td>
@@ -1758,7 +1776,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">29</td>
 <td style="text-align: right;">12.1</td>
 <td style="text-align: right;">0.020567</td>
-<td style="text-align: right;">7.3</td>
+<td style="text-align: right;">8.4</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
@@ -1766,8 +1784,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella franksi</td>
 <td style="text-align: right;">63</td>
 <td style="text-align: right;">26.4</td>
-<td style="text-align: right;">0.065103</td>
-<td style="text-align: right;">23.2</td>
+<td style="text-align: right;">0.054986</td>
+<td style="text-align: right;">22.4</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot E</td>
@@ -1775,8 +1793,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Acropora cervicornis</td>
 <td style="text-align: right;">12</td>
 <td style="text-align: right;">5.5</td>
-<td style="text-align: right;">0.010906</td>
-<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">0.009600</td>
+<td style="text-align: right;">4.3</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
@@ -1784,8 +1802,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Acropora palmata</td>
 <td style="text-align: right;">19</td>
 <td style="text-align: right;">8.7</td>
-<td style="text-align: right;">0.104931</td>
-<td style="text-align: right;">29.0</td>
+<td style="text-align: right;">0.049253</td>
+<td style="text-align: right;">22.0</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot E</td>
@@ -1793,8 +1811,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella annularis</td>
 <td style="text-align: right;">95</td>
 <td style="text-align: right;">43.6</td>
-<td style="text-align: right;">0.127526</td>
-<td style="text-align: right;">35.2</td>
+<td style="text-align: right;">0.084684</td>
+<td style="text-align: right;">37.9</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
@@ -1802,8 +1820,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella faveolata</td>
 <td style="text-align: right;">29</td>
 <td style="text-align: right;">13.3</td>
-<td style="text-align: right;">0.028763</td>
-<td style="text-align: right;">7.9</td>
+<td style="text-align: right;">0.021606</td>
+<td style="text-align: right;">9.7</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot E</td>
@@ -1811,8 +1829,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella franksi</td>
 <td style="text-align: right;">63</td>
 <td style="text-align: right;">28.9</td>
-<td style="text-align: right;">0.090130</td>
-<td style="text-align: right;">24.9</td>
+<td style="text-align: right;">0.058386</td>
+<td style="text-align: right;">26.1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
@@ -1821,7 +1839,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">12</td>
 <td style="text-align: right;">5.4</td>
 <td style="text-align: right;">0.007899</td>
-<td style="text-align: right;">2.5</td>
+<td style="text-align: right;">3.4</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot E</td>
@@ -1829,8 +1847,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Acropora palmata</td>
 <td style="text-align: right;">16</td>
 <td style="text-align: right;">7.2</td>
-<td style="text-align: right;">0.117010</td>
-<td style="text-align: right;">37.5</td>
+<td style="text-align: right;">0.057599</td>
+<td style="text-align: right;">24.5</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
@@ -1838,8 +1856,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella annularis</td>
 <td style="text-align: right;">100</td>
 <td style="text-align: right;">45.0</td>
-<td style="text-align: right;">0.094086</td>
-<td style="text-align: right;">30.2</td>
+<td style="text-align: right;">0.089037</td>
+<td style="text-align: right;">37.9</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot E</td>
@@ -1848,7 +1866,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">29</td>
 <td style="text-align: right;">13.1</td>
 <td style="text-align: right;">0.021633</td>
-<td style="text-align: right;">6.9</td>
+<td style="text-align: right;">9.2</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
@@ -1856,8 +1874,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella franksi</td>
 <td style="text-align: right;">63</td>
 <td style="text-align: right;">28.4</td>
-<td style="text-align: right;">0.070316</td>
-<td style="text-align: right;">22.6</td>
+<td style="text-align: right;">0.057941</td>
+<td style="text-align: right;">24.7</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot E</td>
@@ -1866,7 +1884,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">0.9</td>
 <td style="text-align: right;">0.000718</td>
-<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">0.3</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
@@ -1875,7 +1893,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">6</td>
 <td style="text-align: right;">10.9</td>
 <td style="text-align: right;">0.040812</td>
-<td style="text-align: right;">52.0</td>
+<td style="text-align: right;">57.0</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot E</td>
@@ -1883,8 +1901,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella annularis</td>
 <td style="text-align: right;">25</td>
 <td style="text-align: right;">45.5</td>
-<td style="text-align: right;">0.024503</td>
-<td style="text-align: right;">31.2</td>
+<td style="text-align: right;">0.017636</td>
+<td style="text-align: right;">24.6</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
@@ -1893,7 +1911,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">3</td>
 <td style="text-align: right;">5.5</td>
 <td style="text-align: right;">0.002310</td>
-<td style="text-align: right;">2.9</td>
+<td style="text-align: right;">3.2</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot E</td>
@@ -1902,7 +1920,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">19</td>
 <td style="text-align: right;">34.5</td>
 <td style="text-align: right;">0.010000</td>
-<td style="text-align: right;">12.8</td>
+<td style="text-align: right;">14.0</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
@@ -1911,7 +1929,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">3.6</td>
 <td style="text-align: right;">0.000792</td>
-<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">1.1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot E</td>
@@ -1920,7 +1938,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">6</td>
 <td style="text-align: right;">11.1</td>
 <td style="text-align: right;">0.039732</td>
-<td style="text-align: right;">50.7</td>
+<td style="text-align: right;">55.4</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
@@ -1928,8 +1946,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella annularis</td>
 <td style="text-align: right;">25</td>
 <td style="text-align: right;">46.3</td>
-<td style="text-align: right;">0.025779</td>
-<td style="text-align: right;">32.9</td>
+<td style="text-align: right;">0.019041</td>
+<td style="text-align: right;">26.6</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot E</td>
@@ -1938,7 +1956,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">3</td>
 <td style="text-align: right;">5.6</td>
 <td style="text-align: right;">0.002554</td>
-<td style="text-align: right;">3.3</td>
+<td style="text-align: right;">3.6</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
@@ -1947,7 +1965,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">19</td>
 <td style="text-align: right;">35.2</td>
 <td style="text-align: right;">0.010012</td>
-<td style="text-align: right;">12.8</td>
+<td style="text-align: right;">14.0</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot E</td>
@@ -1965,7 +1983,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">6</td>
 <td style="text-align: right;">10.7</td>
 <td style="text-align: right;">0.042723</td>
-<td style="text-align: right;">56.3</td>
+<td style="text-align: right;">57.1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot E</td>
@@ -1973,8 +1991,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella annularis</td>
 <td style="text-align: right;">25</td>
 <td style="text-align: right;">44.6</td>
-<td style="text-align: right;">0.019503</td>
-<td style="text-align: right;">25.7</td>
+<td style="text-align: right;">0.018388</td>
+<td style="text-align: right;">24.6</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
@@ -1992,7 +2010,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">19</td>
 <td style="text-align: right;">33.9</td>
 <td style="text-align: right;">0.010337</td>
-<td style="text-align: right;">13.6</td>
+<td style="text-align: right;">13.8</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot E</td>
@@ -2050,7 +2068,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="coral_survivorship_report_files/figure-html/outplant-species-prevalence-plot-1.svg" class="img-fluid figure-img"></p>
+<p><img src="coral_survivorship_report_files/figure-html/outplant-species-prevalence-plot-1.svg" class="img-fluid figure-img" alt="Stacked bar plot of outplant species prevalence by survey month, showing each species as a share of present outplant annotations."></p>
 </figure>
 </div>
 </div>
@@ -2062,7 +2080,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="coral_survivorship_report_files/figure-html/outplant-species-cover-plot-1.svg" class="img-fluid figure-img"></p>
+<p><img src="coral_survivorship_report_files/figure-html/outplant-species-cover-plot-1.svg" class="img-fluid figure-img" alt="Stacked bar plot of outplant cover composition by survey month, showing each species as a share of summed outplant cover."></p>
 </figure>
 </div>
 </div>
@@ -2339,7 +2357,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Montastraea cavernosa</td>
 <td style="text-align: right;">167</td>
 <td style="text-align: right;">31.5</td>
-<td style="text-align: right;">8.9</td>
+<td style="text-align: right;">20.6</td>
 <td style="text-align: right;">33.5</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">45</td>
@@ -2352,7 +2370,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella annularis</td>
 <td style="text-align: right;">42</td>
 <td style="text-align: right;">7.9</td>
-<td style="text-align: right;">49.5</td>
+<td style="text-align: right;">16.2</td>
 <td style="text-align: right;">33.5</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">45</td>
@@ -2365,7 +2383,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella faveolata</td>
 <td style="text-align: right;">23</td>
 <td style="text-align: right;">4.3</td>
-<td style="text-align: right;">20.5</td>
+<td style="text-align: right;">14.7</td>
 <td style="text-align: right;">33.5</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">45</td>
@@ -2378,7 +2396,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella franksi</td>
 <td style="text-align: right;">118</td>
 <td style="text-align: right;">22.3</td>
-<td style="text-align: right;">9.6</td>
+<td style="text-align: right;">21.9</td>
 <td style="text-align: right;">33.5</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">45</td>
@@ -2391,7 +2409,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Porites porites</td>
 <td style="text-align: right;">180</td>
 <td style="text-align: right;">34.0</td>
-<td style="text-align: right;">11.5</td>
+<td style="text-align: right;">26.6</td>
 <td style="text-align: right;">33.5</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">45</td>
@@ -2404,7 +2422,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Acropora cervicornis</td>
 <td style="text-align: right;">14</td>
 <td style="text-align: right;">5.2</td>
-<td style="text-align: right;">3.1</td>
+<td style="text-align: right;">3.2</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2417,7 +2435,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Acropora palmata</td>
 <td style="text-align: right;">55</td>
 <td style="text-align: right;">20.3</td>
-<td style="text-align: right;">37.6</td>
+<td style="text-align: right;">36.9</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2430,7 +2448,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella annularis</td>
 <td style="text-align: right;">110</td>
 <td style="text-align: right;">40.6</td>
-<td style="text-align: right;">34.8</td>
+<td style="text-align: right;">35.3</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2443,7 +2461,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella faveolata</td>
 <td style="text-align: right;">29</td>
 <td style="text-align: right;">10.7</td>
-<td style="text-align: right;">6.9</td>
+<td style="text-align: right;">7.0</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2456,7 +2474,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella franksi</td>
 <td style="text-align: right;">63</td>
 <td style="text-align: right;">23.2</td>
-<td style="text-align: right;">17.5</td>
+<td style="text-align: right;">17.7</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2469,7 +2487,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Acropora cervicornis</td>
 <td style="text-align: right;">12</td>
 <td style="text-align: right;">5.0</td>
-<td style="text-align: right;">3.3</td>
+<td style="text-align: right;">3.8</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2482,7 +2500,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Acropora palmata</td>
 <td style="text-align: right;">25</td>
 <td style="text-align: right;">10.5</td>
-<td style="text-align: right;">20.3</td>
+<td style="text-align: right;">23.2</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2495,7 +2513,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella annularis</td>
 <td style="text-align: right;">110</td>
 <td style="text-align: right;">46.0</td>
-<td style="text-align: right;">45.9</td>
+<td style="text-align: right;">42.2</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2508,7 +2526,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella faveolata</td>
 <td style="text-align: right;">29</td>
 <td style="text-align: right;">12.1</td>
-<td style="text-align: right;">7.3</td>
+<td style="text-align: right;">8.4</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2521,7 +2539,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella franksi</td>
 <td style="text-align: right;">63</td>
 <td style="text-align: right;">26.4</td>
-<td style="text-align: right;">23.2</td>
+<td style="text-align: right;">22.4</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2534,7 +2552,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Acropora cervicornis</td>
 <td style="text-align: right;">12</td>
 <td style="text-align: right;">5.5</td>
-<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">4.3</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2547,7 +2565,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Acropora palmata</td>
 <td style="text-align: right;">19</td>
 <td style="text-align: right;">8.7</td>
-<td style="text-align: right;">29.0</td>
+<td style="text-align: right;">22.0</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2560,7 +2578,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella annularis</td>
 <td style="text-align: right;">95</td>
 <td style="text-align: right;">43.6</td>
-<td style="text-align: right;">35.2</td>
+<td style="text-align: right;">37.9</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2573,7 +2591,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella faveolata</td>
 <td style="text-align: right;">29</td>
 <td style="text-align: right;">13.3</td>
-<td style="text-align: right;">7.9</td>
+<td style="text-align: right;">9.7</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2586,7 +2604,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella franksi</td>
 <td style="text-align: right;">63</td>
 <td style="text-align: right;">28.9</td>
-<td style="text-align: right;">24.9</td>
+<td style="text-align: right;">26.1</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2599,7 +2617,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Acropora cervicornis</td>
 <td style="text-align: right;">12</td>
 <td style="text-align: right;">5.4</td>
-<td style="text-align: right;">2.5</td>
+<td style="text-align: right;">3.4</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2612,7 +2630,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Acropora palmata</td>
 <td style="text-align: right;">16</td>
 <td style="text-align: right;">7.2</td>
-<td style="text-align: right;">37.5</td>
+<td style="text-align: right;">24.5</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2625,7 +2643,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella annularis</td>
 <td style="text-align: right;">100</td>
 <td style="text-align: right;">45.0</td>
-<td style="text-align: right;">30.2</td>
+<td style="text-align: right;">37.9</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2638,7 +2656,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella faveolata</td>
 <td style="text-align: right;">29</td>
 <td style="text-align: right;">13.1</td>
-<td style="text-align: right;">6.9</td>
+<td style="text-align: right;">9.2</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2651,7 +2669,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella franksi</td>
 <td style="text-align: right;">63</td>
 <td style="text-align: right;">28.4</td>
-<td style="text-align: right;">22.6</td>
+<td style="text-align: right;">24.7</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2664,7 +2682,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella sp.</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">0.9</td>
-<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">0.3</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2677,7 +2695,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Acropora palmata</td>
 <td style="text-align: right;">6</td>
 <td style="text-align: right;">10.9</td>
-<td style="text-align: right;">52.0</td>
+<td style="text-align: right;">57.0</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2690,7 +2708,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella annularis</td>
 <td style="text-align: right;">25</td>
 <td style="text-align: right;">45.5</td>
-<td style="text-align: right;">31.2</td>
+<td style="text-align: right;">24.6</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2703,7 +2721,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella faveolata</td>
 <td style="text-align: right;">3</td>
 <td style="text-align: right;">5.5</td>
-<td style="text-align: right;">2.9</td>
+<td style="text-align: right;">3.2</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2716,7 +2734,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella franksi</td>
 <td style="text-align: right;">19</td>
 <td style="text-align: right;">34.5</td>
-<td style="text-align: right;">12.8</td>
+<td style="text-align: right;">14.0</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2729,7 +2747,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella sp.</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">3.6</td>
-<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">1.1</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2742,7 +2760,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Acropora palmata</td>
 <td style="text-align: right;">6</td>
 <td style="text-align: right;">11.1</td>
-<td style="text-align: right;">50.7</td>
+<td style="text-align: right;">55.4</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2755,7 +2773,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella annularis</td>
 <td style="text-align: right;">25</td>
 <td style="text-align: right;">46.3</td>
-<td style="text-align: right;">32.9</td>
+<td style="text-align: right;">26.6</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2768,7 +2786,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella faveolata</td>
 <td style="text-align: right;">3</td>
 <td style="text-align: right;">5.6</td>
-<td style="text-align: right;">3.3</td>
+<td style="text-align: right;">3.6</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2781,7 +2799,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella franksi</td>
 <td style="text-align: right;">19</td>
 <td style="text-align: right;">35.2</td>
-<td style="text-align: right;">12.8</td>
+<td style="text-align: right;">14.0</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2807,7 +2825,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Acropora palmata</td>
 <td style="text-align: right;">6</td>
 <td style="text-align: right;">10.7</td>
-<td style="text-align: right;">56.3</td>
+<td style="text-align: right;">57.1</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2820,7 +2838,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella annularis</td>
 <td style="text-align: right;">25</td>
 <td style="text-align: right;">44.6</td>
-<td style="text-align: right;">25.7</td>
+<td style="text-align: right;">24.6</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -2846,7 +2864,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella franksi</td>
 <td style="text-align: right;">19</td>
 <td style="text-align: right;">33.9</td>
-<td style="text-align: right;">13.6</td>
+<td style="text-align: right;">13.8</td>
 <td style="text-align: right;">31.8</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">42</td>
@@ -3418,7 +3436,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="coral_survivorship_report_files/figure-html/plot-c-cumulative-survival-plot-1.svg" class="img-fluid figure-img"></p>
+<p><img src="coral_survivorship_report_files/figure-html/plot-c-cumulative-survival-plot-1.svg" class="img-fluid figure-img" alt="Line plot of Plot C cumulative outplant survivorship over survey dates with confidence intervals and temperature overlay."></p>
 </figure>
 </div>
 </div>
@@ -3484,7 +3502,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="coral_survivorship_report_files/figure-html/plot-c-interval-survival-plot-1.svg" class="img-fluid figure-img"></p>
+<p><img src="coral_survivorship_report_files/figure-html/plot-c-interval-survival-plot-1.svg" class="img-fluid figure-img" alt="Line plot of Plot C interval survivorship between adjacent survey months with confidence intervals."></p>
 </figure>
 </div>
 </div>
@@ -3526,9 +3544,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Plot C</td>
 <td style="text-align: left;">June</td>
 <td style="text-align: right;">530</td>
-<td style="text-align: right;">0.728634</td>
+<td style="text-align: right;">0.313673</td>
 <td style="text-align: right;">480</td>
-<td style="text-align: right;">0.15180</td>
+<td style="text-align: right;">0.06535</td>
 </tr>
 </tbody>
 </table>
@@ -3538,7 +3556,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="coral_survivorship_report_files/figure-html/plot-c-cover-plot-1.svg" class="img-fluid figure-img"></p>
+<p><img src="coral_survivorship_report_files/figure-html/plot-c-cover-plot-1.svg" class="img-fluid figure-img" alt="Line plot of Plot C outplant cover through time as a percent of plot area."></p>
 </figure>
 </div>
 </div>
@@ -3631,7 +3649,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">167</td>
 <td style="text-align: right;">31.5</td>
 <td style="text-align: right;">0.064634</td>
-<td style="text-align: right;">8.9</td>
+<td style="text-align: right;">20.6</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot C</td>
@@ -3639,8 +3657,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella annularis</td>
 <td style="text-align: right;">42</td>
 <td style="text-align: right;">7.9</td>
-<td style="text-align: right;">0.360947</td>
-<td style="text-align: right;">49.5</td>
+<td style="text-align: right;">0.050798</td>
+<td style="text-align: right;">16.2</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot C</td>
@@ -3648,8 +3666,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella faveolata</td>
 <td style="text-align: right;">23</td>
 <td style="text-align: right;">4.3</td>
-<td style="text-align: right;">0.149702</td>
-<td style="text-align: right;">20.5</td>
+<td style="text-align: right;">0.046198</td>
+<td style="text-align: right;">14.7</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Plot C</td>
@@ -3657,8 +3675,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Orbicella franksi</td>
 <td style="text-align: right;">118</td>
 <td style="text-align: right;">22.3</td>
-<td style="text-align: right;">0.069852</td>
-<td style="text-align: right;">9.6</td>
+<td style="text-align: right;">0.068545</td>
+<td style="text-align: right;">21.9</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Plot C</td>
@@ -3667,7 +3685,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">180</td>
 <td style="text-align: right;">34.0</td>
 <td style="text-align: right;">0.083498</td>
-<td style="text-align: right;">11.5</td>
+<td style="text-align: right;">26.6</td>
 </tr>
 </tbody>
 </table>
@@ -3677,7 +3695,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="coral_survivorship_report_files/figure-html/plot-c-species-prevalence-plot-1.svg" class="img-fluid figure-img"></p>
+<p><img src="coral_survivorship_report_files/figure-html/plot-c-species-prevalence-plot-1.svg" class="img-fluid figure-img" alt="Stacked bar plot of Plot C outplant species prevalence by survey month."></p>
 </figure>
 </div>
 </div>
@@ -3689,7 +3707,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="coral_survivorship_report_files/figure-html/plot-c-species-cover-plot-1.svg" class="img-fluid figure-img"></p>
+<p><img src="coral_survivorship_report_files/figure-html/plot-c-species-cover-plot-1.svg" class="img-fluid figure-img" alt="Stacked bar plot of Plot C outplant cover composition by species and survey month."></p>
 </figure>
 </div>
 </div>
@@ -4503,7 +4521,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="coral_survivorship_report_files/figure-html/plot-g-cumulative-survival-plot-1.svg" class="img-fluid figure-img"></p>
+<p><img src="coral_survivorship_report_files/figure-html/plot-g-cumulative-survival-plot-1.svg" class="img-fluid figure-img" alt="Line plot of Plot G cumulative outplant survivorship over survey dates with confidence intervals and temperature overlay."></p>
 </figure>
 </div>
 </div>
@@ -4569,7 +4587,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="coral_survivorship_report_files/figure-html/plot-g-interval-survival-plot-1.svg" class="img-fluid figure-img"></p>
+<p><img src="coral_survivorship_report_files/figure-html/plot-g-interval-survival-plot-1.svg" class="img-fluid figure-img" alt="Line plot of Plot G interval survivorship between adjacent survey months with confidence intervals."></p>
 </figure>
 </div>
 </div>
@@ -4623,7 +4641,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="coral_survivorship_report_files/figure-html/plot-g-cover-plot-1.svg" class="img-fluid figure-img"></p>
+<p><img src="coral_survivorship_report_files/figure-html/plot-g-cover-plot-1.svg" class="img-fluid figure-img" alt="Line plot of Plot G outplant cover through time as a percent of plot area."></p>
 </figure>
 </div>
 </div>
@@ -4699,7 +4717,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="coral_survivorship_report_files/figure-html/plot-g-species-prevalence-plot-1.svg" class="img-fluid figure-img"></p>
+<p><img src="coral_survivorship_report_files/figure-html/plot-g-species-prevalence-plot-1.svg" class="img-fluid figure-img" alt="Stacked bar plot of Plot G outplant species prevalence by survey month."></p>
 </figure>
 </div>
 </div>
@@ -4711,7 +4729,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="coral_survivorship_report_files/figure-html/plot-g-species-cover-plot-1.svg" class="img-fluid figure-img"></p>
+<p><img src="coral_survivorship_report_files/figure-html/plot-g-species-cover-plot-1.svg" class="img-fluid figure-img" alt="Stacked bar plot of Plot G outplant cover composition by species and survey month."></p>
 </figure>
 </div>
 </div>

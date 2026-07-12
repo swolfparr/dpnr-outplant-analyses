@@ -2,7 +2,9 @@
 title: "All Coral Cover"
 format:
   html:
-    theme: cosmo
+    theme:
+      - cosmo
+      - styles.scss
     toc: true
     code-fold: true
     embed-resources: false
@@ -88,6 +90,7 @@ Percent coral cover is calculated as the summed area of all coral annotations di
 #| label: all-coral-cover-plot
 #| fig-width: 9
 #| fig-height: 5
+#| fig-alt: "Line plot of whole-plot coral cover through time for configured plots, with survey dates on the x-axis and coral cover percentage on the y-axis."
 
 all_coral_cover_plot
 ```
@@ -120,6 +123,7 @@ This figure shows how much of each plot is covered by the largest coral classes 
 #| label: all-coral-species-cover-plot
 #| fig-width: 10
 #| fig-height: 6
+#| fig-alt: "Faceted stacked area plot showing whole-plot coral cover by species group through time for each configured plot."
 
 all_coral_species_cover_plot
 ```

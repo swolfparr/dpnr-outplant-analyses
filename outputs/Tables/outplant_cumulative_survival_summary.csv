@@ -1,9 +1,9 @@
 plot,month_order,month,survey_date,n_plot_sections,plot_section_labels,plot_section,plot_section_label,baseline_month,baseline_date,n_baseline,n_died_interval,cumulative_deaths_observed,n_surviving_from_baseline,baseline_surviving_area_m2,expected_plot_sections,expected_plot_section_labels,percent_cumulative_survival,percent_cumulative_survival_low,percent_cumulative_survival_high
 Plot C,2,April,2026-04-03,2,Plot C 0-0; Plot C 1-0,all,Plot C,April,2026-04-03,554,0,0,554,0.36296300000000004,2,Plot C 0-0; Plot C 1-0,100,99.33634923619502,100
-Plot C,3,June,2026-06-06,2,Plot C 0-0; Plot C 1-0,all,Plot C,April,2026-04-03,554,28,28,526,0.7246222499999992,2,Plot C 0-0; Plot C 1-0,94.94584837545126,92.777920382687,96.6156336935243
-Plot E,1,May,2025-05-07,2,Plot E 1-0; Plot E 1-1,all,Plot E,May,2025-05-07,271,0,0,271,0.28207375000000007,2,Plot E 1-0; Plot E 1-1,100,98.64801244081264,100
-Plot E,2,June,2025-06-09,2,Plot E 1-0; Plot E 1-1,all,Plot E,May,2025-05-07,271,35,35,236,0.27910425000000005,2,Plot E 1-0; Plot E 1-1,87.08487084870849,82.49830371178574,90.83667907025146
-Plot E,3,July,2025-07-11,2,Plot E 1-0; Plot E 1-1,all,Plot E,May,2025-05-07,271,19,54,217,0.36171775000000006,2,Plot E 1-0; Plot E 1-1,80.07380073800738,74.81475306197578,84.66180636190914
-Plot E,4,August,2025-08-04,2,Plot E 1-0; Plot E 1-1,all,Plot E,May,2025-05-07,271,4,58,213,0.3085867500000001,2,Plot E 1-0; Plot E 1-1,78.59778597785977,73.22956518890139,83.3286711222492
+Plot C,3,June,2026-06-06,2,Plot C 0-0; Plot C 1-0,all,Plot C,April,2026-04-03,554,28,28,526,0.3096615,2,Plot C 0-0; Plot C 1-0,94.94584837545126,92.777920382687,96.6156336935243
+Plot E,1,May,2025-05-07,2,Plot E 1-0; Plot E 1-1,all,Plot E,May,2025-05-07,271,0,0,271,0.2787807500000001,2,Plot E 1-0; Plot E 1-1,100,98.64801244081264,100
+Plot E,2,June,2025-06-09,2,Plot E 1-0; Plot E 1-1,all,Plot E,May,2025-05-07,271,35,35,236,0.2438692500000001,2,Plot E 1-0; Plot E 1-1,87.08487084870849,82.49830371178574,90.83667907025146
+Plot E,3,July,2025-07-11,2,Plot E 1-0; Plot E 1-1,all,Plot E,May,2025-05-07,271,19,54,217,0.22299000000000005,2,Plot E 1-0; Plot E 1-1,80.07380073800738,74.81475306197578,84.66180636190914
+Plot E,4,August,2025-08-04,2,Plot E 1-0; Plot E 1-1,all,Plot E,May,2025-05-07,271,4,58,213,0.2317522500000001,2,Plot E 1-0; Plot E 1-1,78.59778597785977,73.22956518890139,83.3286711222492
 Plot G,2,April,2026-04-24,3,Plot G 0-0; Plot G 0-1; Plot G 1-0,all,Plot G,April,2026-04-24,45,0,0,45,0.059005,3,Plot G 0-0; Plot G 0-1; Plot G 1-0,100,92.12948995931569,100
 Plot G,3,May,2026-05-26,3,Plot G 0-0; Plot G 0-1; Plot G 1-0,all,Plot G,April,2026-04-24,45,0,0,45,0.05925325000000001,3,Plot G 0-0; Plot G 0-1; Plot G 1-0,100,92.12948995931569,100
